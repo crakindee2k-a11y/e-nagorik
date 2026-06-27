@@ -1,0 +1,243 @@
+:root {
+    --bd-green: #006A4E;
+    --bd-green-dark: #004535;
+    --bd-red: #F42A41;
+    --bd-gold: #C8920A;
+    --bg: #f0f4f0;
+    --text: #1a2332;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: "Segoe UI", sans-serif;
+    background: var(--bg);
+    color: var(--text);
+}
+
+.navbar {
+    background: linear-gradient(135deg, var(--bd-green) 0%, var(--bd-green-dark) 100%);
+    color: white;
+    height: 58px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 20px;
+    position: sticky;
+    top: 0;
+    z-index: 200;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, .25);
+}
+
+.navbar-brand {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    text-decoration: none;
+    color: white;
+}
+
+.navbar-links {
+    display: flex;
+    gap: 6px;
+    flex-wrap: wrap;
+}
+
+.navbar-link {
+    background: transparent;
+    color: white;
+    border: 1px solid transparent;
+    border-radius: 7px;
+    padding: 5px 12px;
+    cursor: pointer;
+    font-size: 12px;
+    text-decoration: none;
+}
+
+.navbar-link.active {
+    background: rgba(255, 255, 255, .2);
+    border-color: rgba(255, 255, 255, .5);
+    font-weight: 700;
+}
+
+.layout {
+    display: flex;
+}
+
+.sidebar {
+    width: 210px;
+    background: white;
+    min-height: calc(100vh - 58px);
+    box-shadow: 1px 0 6px rgba(0, 0, 0, .06);
+}
+
+.sidebar-item {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 11px 16px;
+    cursor: pointer;
+    font-size: 13px;
+    color: #444;
+    border-left: 3px solid transparent;
+    text-decoration: none;
+}
+
+.sidebar-item.active {
+    background: rgba(0, 106, 78, .07);
+    border-left-color: var(--bd-green);
+    color: var(--bd-green);
+    font-weight: 700;
+}
+
+.main {
+    flex: 1;
+    padding: 24px;
+}
+
+.card {
+    background: white;
+    border-radius: 12px;
+    padding: 20px;
+    box-shadow: 0 1px 10px rgba(0, 0, 0, .07);
+    margin-bottom: 16px;
+}
+
+.btn {
+    border: 1px solid var(--bd-green);
+    border-radius: 8px;
+    padding: 9px 18px;
+    font-size: 13px;
+    font-weight: 600;
+    cursor: pointer;
+    background: white;
+    color: var(--bd-green);
+}
+
+.btn-primary {
+    background: var(--bd-green);
+    color: white;
+    border-color: var(--bd-green);
+}
+
+.btn-outline {
+    background: white;
+    color: var(--bd-green);
+}
+
+.btn-danger {
+    background: var(--bd-red);
+    color: white;
+    border-color: var(--bd-red);
+}
+
+.btn-block {
+    width: 100%;
+}
+
+.badge {
+    border-radius: 20px;
+    padding: 2px 10px;
+    font-size: 12px;
+    font-weight: 600;
+    display: inline-block;
+}
+
+.grid {
+    display: grid;
+    gap: 14px;
+}
+
+.grid-stats {
+    grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+}
+
+.grid-cards {
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+}
+
+.stat-card {
+    border-radius: 12px;
+    padding: 18px 20px;
+    color: white;
+}
+
+.stat-card .value {
+    font-size: 26px;
+    font-weight: 700;
+    line-height: 1;
+}
+
+.stat-card .label {
+    font-size: 12px;
+    opacity: .9;
+    margin-top: 4px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 13px;
+}
+
+th {
+    padding: 9px 10px;
+    text-align: left;
+    color: var(--bd-green);
+    font-weight: 700;
+    font-size: 11px;
+    background: rgba(0, 106, 78, .05);
+}
+
+td {
+    padding: 9px 10px;
+    border-bottom: 1px solid #f2f2f2;
+}
+
+input, textarea, select {
+    width: 100%;
+    border: 1.5px solid #ddd;
+    border-radius: 7px;
+    padding: 9px 12px;
+    font-size: 13px;
+    outline: none;
+    box-sizing: border-box;
+    font-family: inherit;
+}
+
+.stepper {
+    display: flex;
+    align-items: center;
+    margin-bottom: 24px;
+}
+
+.step-circle {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    font-size: 12px;
+    color: white;
+    background: #ddd;
+}
+
+.step-circle.done, .step-circle.current {
+    background: var(--bd-green);
+}
+
+.step-line {
+    flex: 1;
+    height: 2px;
+    background: #e0e0e0;
+    margin: 0 3px 18px;
+}
+
+.step-line.done {
+    background: var(--bd-green);
+}
