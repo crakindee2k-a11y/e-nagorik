@@ -1,5 +1,6 @@
 # e-nagorik
 
+
 Citizen e-governance platform — apply for civic services, track applications, issue certificates. Built as a Java backend (raw `javac`, no framework) + React/Vite frontend.
 
 ## Tech
